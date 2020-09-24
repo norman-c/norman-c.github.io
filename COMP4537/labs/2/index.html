@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+</body>
+<script>
+    // Part A
+    let alphabet = ('ABCDEFGHIJKLMNOPQRSTUVWXYZ'). split('');
+
+    function generateButtons(n){
+        for(i = 0; i < n; i++){
+            let button = document.createElement("button");
+            let char = alphabet[i]
+            button.innerHTML = char;
+
+            document.body.appendChild(button);
+
+            button.addEventListener ("click", function() {
+            console.log("Button " + char + " was clicked");});
+        }
+    }
+
+    while(true){
+        let number = window.prompt("Please enter the number of buttons");
+        // Checks if input is between 0 and 26 and is number
+        if(number < 0 || number > 26 || isNaN(number)){
+            alert("Please enter a number between 0 and 26")
+        }else{
+            generateButtons(number)
+            document.write("<br>")
+            break;
+        }
+    }
+
+    // Part B
+    function Recipe(title, servings, ingredients){
+        this.title = title;
+        this.servings = servings;
+        this.ingredients = ingredients;
+        this.print = function (){
+            document.write("<b>Title: " + this.title + "<br>Servings: " + this.servings + "<br>Ingredients: ");
+            for(i = 0; i < this.ingredients.length; i++){
+                document.write("<br>" + this.ingredients[i]);
+            }
+            document.write("</b>");
+        }
+    }
+
+    let recipe = new Recipe("Chicken Cacciatore", 2, ["cinnamon","lettuce","onion"]);
+    recipe.print();
+</script>
+</html>
