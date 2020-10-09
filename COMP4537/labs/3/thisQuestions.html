@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        normanc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="BCIT COMP 4537 website">
+    <style>
+        body {
+            background-color: #ffffff;
+            background-repeat: no-repeat;
+            background-position: top left;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            font-family: Arial, sans-serif;
+            color: #000000;
+            background-color: #ffffff;
+        }
+
+        p {
+            font-family: Georgia, serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: normal;
+            color: #000000;
+            background-color: #ffffff;
+        }
+
+        .question {
+            font-weight: 600;
+        }
+
+        .answers {
+            margin-bottom: 20px;
+        }
+
+        .answers label {
+            display: block;
+        }
+
+        #submit {
+            font-family: sans-serif;
+            font-size: 20px;
+            background-color: #279;
+            color: #fff;
+            border: 0px;
+            border-radius: 3px;
+            padding: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        #submit:hover {
+            background-color: #38a;
+        }
+    </style>
+
+    <script>
+        (window.onload = function () {
+            const quizContainer = document.getElementById('quiz');
+            const questions = [
+                {
+                    question: "What is the naming convention of Javascript?",
+                    answers: {
+                        a: "camelCase",
+                        b: "PascalCase",
+                        c: "snake_case"
+                    }
+                },
+                {
+                    question: "Which one of these is not a data type in Javascript?",
+                    answers: {
+                        a: "Numeric",
+                        b: "String",
+                        c: "Char"
+                    }
+                },
+                {
+                    question: "Which method on an array can be used to remove the last element?",
+                    answers: {
+                        a: ".remove()",
+                        b: ".last()",
+                        c: ".pop()"
+                    }
+                },
+                {
+                    question: "How do you create a variable holding the number 1?",
+                    answers: {
+                        a: "int n = 1",
+                        b: "var n = 1",
+                        c: "number n = 1"
+                    }
+                },
+                {
+                    question: "Which statement does not access the property \"name\" of the course object?",
+                    answers: {
+                        a: "course.name",
+                        b: "course.get(name)",
+                        c: "course[\"name\"]"
+                    }
+                }
+            ];
+
+
+            const output = [];
+
+            questions.forEach(
+                (currentQuestion, questionNumber) => {
+
+                    const answers = [];
+                    for (letter in currentQuestion.answers) {
+
+                        // add radio button
+                        answers.push(
+                            `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+            </label>`
+                        );
+                    }
+                    // add question to array
+                    output.push(
+                        `<div class="question"> ${currentQuestion.question} </div>
+          <div class="answers"> ${answers.join('')} </div>`
+                    );
+                }
+            );
+            quizContainer.innerHTML = output.join('');
+
+        })();
+    </script>
+</head>
+
+<body>
+
+    <h1>Lab 3 this-Quiz</h1>
+    <div id="quiz"></div>
+</body>
+
+</html>
