@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body onload="gameStart(3,3,0,[],[],[],false, 0)">
+    <h1>Memory Game</h1>
+    <div id="game">
+        <!-- <input type="button" id="start" value="New game"  onclick="gameStart(3,3,0,[],[],[],false, 0)"> -->
+        <input type="button" id="terminate" value="Terminate" >
+        <div id="scoreBoard">
+        Score: <span id="score"></span>
+        </div>
+        <div id="grid"></div>
+    </div>
+    <div id="summary">
+        <h1>Summary</h1>
+        Score: <span id="scoresummary"></span><br>
+        <input type="button" id="restart" value="Restart"  onclick="gameStart(3,3,0,[],[],[],false, 0)">
+        <br>
+        <br>
+        Add to leaderboard: <br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="BCIT"><br>
+        <input type="submit" value="Submit">
+    </div>
+</body>
+<script src="main.js" type="text/javascript"></script>
+</html>
