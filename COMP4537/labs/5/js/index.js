@@ -1,5 +1,9 @@
 function isLetters(s) {
-    return s.match("/^[A-Za-z ]+$/");
+    return s.match("^[a-zA-Z\(\)]+$");
+}
+
+function isLettersAndSpace(s) {
+    return s.match("^[a-zA-Z\s]*$");
 }
 
 function isEmpty(str) {
@@ -9,7 +13,7 @@ function isEmpty(str) {
 function add() {
     let word = document.getElementById("word").value.trim();
     let define = document.getElementById("define").value.trim();
-    if (!isLetters(word) || !isLetters(define) || isEmpty(word) || isEmpty(define)) {
+    if (!isLetters(word) || !isLettersAndSpace(define) || isEmpty(word) || isEmpty(define)) {
         alert("Invalid input");
         console.log("Invalid input");
     } else {
