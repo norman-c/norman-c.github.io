@@ -13,7 +13,7 @@ function add() {
         alert("Invalid input");
         console.log("Invalid input");
     } else {
-        fetch("https://powerful-hamlet-15519.herokuapp.com/dictionary", {
+        fetch("https://powerful-hamlet-15519.herokuapp.com/api/definitions", {
             method: "POST",
             mode: "cors",
             headers: {
@@ -47,7 +47,7 @@ function find() {
         alert("Invalid input");
         console.log("Invalid input");
     } else {
-        fetch(`https://powerful-hamlet-15519.herokuapp.com/dictionary?word=${word}`)
+        fetch(`https://powerful-hamlet-15519.herokuapp.com/api/definitions?word=${word}`)
             .then(res => {
                 let code = res.status;
                 if (code > 199 && code < 400) {
