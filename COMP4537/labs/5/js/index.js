@@ -1,5 +1,5 @@
 function isLetters(s) {
-    return s.match("^[a-zA-Z\(\)]+$");
+    return s.match("/^[A-Za-z ]+$/");
 }
 
 function isEmpty(str) {
