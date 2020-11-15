@@ -3,7 +3,7 @@ function isLetters(s) {
 }
 
 function isLettersAndSpace(s) {
-    return s.match("^[a-zA-Z\s]*$");
+    return s.match("^[a-zA-Z ]+$");
 }
 
 function isEmpty(str) {
