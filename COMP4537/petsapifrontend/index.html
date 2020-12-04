@@ -13,34 +13,48 @@
 
     <button onclick="getAllPets()">Get all Pets</button><br>
 
-    <label for="name">Name</label><br>
+
+    <label for="name">Name</label>
     <input type="text" id="name" name="name"><br>
-    <label for="type">Type</label><br>
+    <label for="type">Type</label>
     <input type="text" id="type" name="type" placeholder="dog/cat etc"><br>
-    <label for="breed">Breed</label><br>
+    <label for="breed">Breed</label>
     <input type="text" id="breed" name="breed"><br>
-    <label for="age">Age</label><br>
+    <label for="age">Age</label>
     <input type="text" id="age" name="age"><br>
     <button onclick="createPet()">Create pet</button><br>
 
+    <br><br>
+    <label for="petid">Pet Id</label>
+    <input type="text" id="petid" name="petid"><br>
+    <label for="pnameupdate">Name</label>
+    <input type="text" id="pnameupdate" name="pnameupdate"><br>
+    <label for="ptypeupdate">Type</label>
+    <input type="text" id="ptypeupdate" name="ptypeupdate" placeholder="dog/cat etc"><br>
+    <label for="pbreedupdate">Breed</label>
+    <input type="text" id="pbreedupdate" name="pbreedupdate"><br>
+    <label for="pageupdate">Age</label>
+    <input type="text" id="pageupdate" name="pageupdate"><br>
+    <button onclick="updatePet()">Update pet</button><br>
 
-    <label for="id">Id</label><br>
+    <br>
+    <label for="id">Id</label>
     <input type="text" id="id" name="id"><br>
     <button onclick="getPetById()">Get pet by id</button><br>
-
-    <label for="type">Type</label><br>
+    <br>
+    <label for="type">Type</label>
     <input type="text" id="type" name="type"><br>
     <button onclick="getPetByType()">Get pet by Type</button><br>
-
-    <label for="iddelete">Id</label><br>
+    <br>
+    <label for="iddelete">Id</label>
+    <input type="text" id="iddelete" name="iddelete"><br>
+    <button onclick="deletePetById()">Delete pet by id</button><br>
+    <br>
+    <label for="typedelete">Id</label>
     <input type="text" id="iddelete" name="iddelete"><br>
     <button onclick="deletePetById()">Delete pet by id</button><br>
 
-    <label for="typedelete">Id</label><br>
-    <input type="text" id="iddelete" name="iddelete"><br>
-    <button onclick="deletePetById()">Delete pet by id</button><br>
-
-
+    <br>
     <button onclick="getAllOwners()">Get all Owners</button><br>
 
 </body>

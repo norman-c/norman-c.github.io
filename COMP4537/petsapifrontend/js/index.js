@@ -63,6 +63,41 @@ function createPet() {
 
 }
 
+function updatePet() {
+    let name = document.getElementById("pnameupdate").value.trim();
+    let type = document.getElementById("ptypeupdate").value.trim();
+    let breed = document.getElementById("pbreedupdate").value.trim();
+    let age = document.getElementById("pageupdate").value.trim();
+    let petid = document.getElementById("petid").value.trim();
+
+    fetch(`https://petsapi4537.herokuapp.com/api/v1/pets/update`, {
+        method: "PATCH",
+        mode: "cors",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        redirect: "follow",
+        body: JSON.stringify({ "name": name, "type": type, "breed": breed, "age": age, "petid": petid })
+    }).then(res => {
+        console.log(res.status)
+        let code = res.status;
+        if (code > 199 && code < 400) {
+            return res.json();
+        } else {
+            return res.json();
+        }
+    }).then(data => {
+        let textbox = document.getElementById("textbox");
+        if (data.invalid) {
+            textbox.innerHTML = "Error";
+        } else {
+            let myString = JSON.stringify(data);
+            textbox.innerHTML = myString
+        }
+    }).catch(e => console.log(e));
+}
+
+
 function getAllPets() {
     fetch(`https://petsapi4537.herokuapp.com/api/v1/pets/`)
         .then(res => {
@@ -70,7 +105,7 @@ function getAllPets() {
             if (code > 199 && code < 400) {
                 return res.json();
             } else {
-                return { "invalid": true };
+                return res.json();
             }
         }).then(data => {
             let textbox = document.getElementById("textbox");
