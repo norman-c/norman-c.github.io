@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Api Client</title>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <textarea rows="20" cols="80" id="textbox" name="textbox" placeholder="API response here" readonly="readonly"></textarea><br>
+
+    <button onclick="getAllPets()">Get all Pets</button><br>
+
+    <label for="name">Name</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="type">Type</label><br>
+    <input type="text" id="type" name="type" placeholder="dog/cat etc"><br>
+    <label for="breed">Breed</label><br>
+    <input type="text" id="breed" name="breed"><br>
+    <label for="age">Age</label><br>
+    <input type="text" id="age" name="age"><br>
+    <button onclick="createPet()">Create pet</button><br>
+
+
+    <label for="id">Id</label><br>
+    <input type="text" id="id" name="id"><br>
+    <button onclick="getPetById()">Get pet by id</button><br>
+
+    <label for="type">Type</label><br>
+    <input type="text" id="type" name="type"><br>
+    <button onclick="getPetByType()">Get pet by Type</button><br>
+
+    <label for="iddelete">Id</label><br>
+    <input type="text" id="iddelete" name="iddelete"><br>
+    <button onclick="deletePetById()">Delete pet by id</button><br>
+
+    <label for="typedelete">Id</label><br>
+    <input type="text" id="iddelete" name="iddelete"><br>
+    <button onclick="deletePetById()">Delete pet by id</button><br>
+
+
+    <button onclick="getAllOwners()">Get all Owners</button><br>
+
+</body>
+
+</html>
