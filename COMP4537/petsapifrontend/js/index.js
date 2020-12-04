@@ -71,7 +71,7 @@ function updatePet() {
     let petid = document.getElementById("petid").value.trim();
 
     fetch(`https://petsapi4537.herokuapp.com/api/v1/pets/update`, {
-        method: "PATCH",
+        method: "PUT",
         mode: "cors",
         headers: {
             "Content-Type": "application/json"
