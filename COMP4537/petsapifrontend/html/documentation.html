@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pet API</title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Pet API, Pet">
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <link rel="stylesheet" href="../css/style.css" type="text/css" media="all">
+	<link href="//fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800" rel="stylesheet">
+	<link href="../css/documentation.css" rel="stylesheet">
+</head>
+<body>
+	<div class='container'>
+		<div id='top-section'>
+			<table class='head-table'>
+				<thead>
+					<tr>
+						<th><p><span>Pet API</span> is a web api that allows users to store their pets as well as their own information. This API does not have security implemented so an API key is not required. Only simple data is transferred so loads over 200k will not be accepted by the API, as well as the data validation is not 100%.</p></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="api-string">
+							<span><a href='https://darkraginginferno.github.io/COMP4537/termProject/pokeAPI/index.html'>https://petsapi4537.herokuapp.com/api/v1</a></span>	
+						</td>
+					</tr>
+                    
+				</tbody>
+			</table>
+		</div>
+
+
+			</div>
+		</div>
+		
+		<div id='pet-section'>
+			<div id='pet-endpoints'>
+				<h1>Pets</h1>
+				<p class="p-description"><span>Pets</span> come in a variety of species</p>
+				<h2>Pet Endpoints</h2>
+				<div id='pet-description'>
+					<table>
+						<colgroup>
+							<col width="30%">
+							<col width="70%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>Endpoint</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class='td-endpoint'>
+									<span class='get http-type'>GET</span>
+									<p class='endpoint'>/pets/get</p>
+								</td>
+								<td>
+									<p class='endpoint-description'>Gets all pets</p>
+								</td>
+                            </tr>
+                            <tr>
+								<td class='td-endpoint'>
+									<span class='get http-type'>GET</span>
+									<p class='endpoint'>/pets/get/petid</p>
+								</td>
+								<td>
+									<p class='endpoint-description'>Gets pets by id</p>
+								</td>
+							</tr>
+							<tr>
+								<td class='td-endpoint'>
+									<span class='put http-type'>PUT</span>
+									<p class='endpoint'>/pets/update</p>
+								</td>
+								<td>
+									<p class='endpoint-description'>Updates a pets information</p>
+								</td>
+							</tr>
+							<tr>
+								<td class='td-endpoint'>
+									<span class='delete http-type'>DEL</span>
+									<p class='endpoint'>/pets/delete</p>
+								</td>
+								<td>
+									<p class='endpoint-description'>Deletes a pet</p>
+								</td>
+							</tr>
+							<tr>
+								<td class='td-endpoint'>
+									<span class='post http-type'>POST</span>
+									<p class='endpoint'>/pets/create</p>
+								</td>
+								<td>
+									<p class='endpoint-description'>Creates a new pet</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div id='owner-section'>
+			<div id='owner-description'>
+				<h1>Owners</h1>
+				<p class="p-description"><span>Owners</span> are the people who care for their pets.</p>
+			</div>
+			<div id='owner-endpoints'>
+				<h2>Owner Endpoints</h2>
+				<table>
+					<colgroup>
+						<col width="30%">
+						<col width="70%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>Endpoint</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class='td-endpoint'>
+								<span class='get http-type'>GET</span>
+								<p class='endpoint'>/owners/get</p>
+							</td>
+							<td>
+								<p class='endpoint-description'>Gets all Owners</p>
+							</td>
+                        </tr>
+                        <tr>
+                            <td class='td-endpoint'>
+                                <span class='get http-type'>GET</span>
+                                <p class='endpoint'>/owners/get/ownerid</p>
+                            </td>
+                            <td>
+                                <p class='endpoint-description'>Gets owner by id</p>
+                            </td>
+                        </tr>
+						<tr>
+							<td class='td-endpoint'>
+								<span class='put http-type'>PUT</span>
+								<p class='endpoint'>/owners/update</p>
+							</td>
+							<td>
+								<p class='endpoint-description'>Updates an Owner's information such as name or age</p>
+							</td>
+						</tr>
+						<tr>
+							<td class='td-endpoint'>
+								<span class='delete http-type'>DEL</span>
+								<p class='endpoint'>/owners/delete</p>
+							</td>
+							<td>
+								<p class='endpoint-description'>Deletes an Owner</p>
+							</td>
+						</tr>
+						<tr>
+							<td class='td-endpoint'>
+								<span class='post http-type'>POST</span>
+								<p class='endpoint'>/owners/create</p>
+							</td>
+							<td>
+								<p class='endpoint-description'>Creates a new owner</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+</body>
+</html>

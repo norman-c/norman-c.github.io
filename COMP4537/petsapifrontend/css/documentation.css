@@ -1,0 +1,178 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title {
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#user-section,
+#pet-section,
+#owner-section,
+#party-section,
+#top-section {
+    width: 90%;
+}
+
+
+.head-table, th, td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+table{
+    width:100%;
+}
+
+span,
+.endpoint {
+    color: #4064AC;
+}
+
+span:hover {
+    color: #1773EA;
+}
+
+.endpoint-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.td-endpoint{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.http-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+
+.endpoint-container > child {
+    margin-right: 5px;
+}
+
+.get,
+.post,
+.put,
+.delete {
+    color: white;
+    border-radius: 5px;
+}
+
+.get {
+    background-color: green;
+}
+.delete {
+    background-color: #680000;
+}
+.put {
+    background-color: #6363F7;
+}
+.post {
+    background-color: #604771;
+}
+
+table, td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th{
+    background-color: #f2f2f2;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+.td-endpoint {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+.endpoint{
+    margin-left: 5px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+pre code {  
+    background-color: #292B36;
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
+    border-radius: 4px;
+    color: white;
+
+    /* wrap the pretext code */
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+p {
+    font-size: 22px;
+}
+.p-description {
+    margin-top:10px;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bolder;
+    margin-top: 30px;
+    
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bolder;
+    margin-top: 30px;
+}
+
+.api-string{
+    font-size: 30px;
+}
+
+.red {
+    color: red;
+}
+
+.purple {
+    color: #B180DA;
+}
+
+.green {
+    color: #CDF76D;
+}
+
+.orange{
+    color: #F07D24;
+}
+
+.lightblue {
+    color: #ABF7F7;
+}
+
+.yellow {
+    color: #F7D647;
+}

@@ -60,7 +60,6 @@ function createPet() {
             textbox.innerHTML = myString
         }
     }).catch(e => console.log(e));
-
 }
 
 function updatePet() {
@@ -188,6 +187,113 @@ function deletePetById() {
     let id = document.getElementById("iddelete").value.trim();
 
     fetch(`https://petsapi4537.herokuapp.com/api/v1/pets/delete?petid=${id}`, { method: 'DELETE', })
+        .then(res => {
+            let code = res.status;
+            if (code > 199 && code < 400) {
+                return res.json();
+            } else {
+                return res.json();
+            }
+        }).then(data => {
+            let textbox = document.getElementById("textbox");
+            if (data.invalid) {
+                textbox.innerHTML = "Error";
+            } else {
+                let myString = JSON.stringify(data);
+                textbox.innerHTML = myString
+            }
+        });
+
+}
+
+function createOwner() {
+    let name = document.getElementById("owner_name").value.trim();
+    let age = document.getElementById("owner_age").value.trim();
+    
+    fetch(`https://petsapi4537.herokuapp.com/api/v1/owners/?name=${name}&age=${age}`, {
+        method: "POST",
+        mode: "cors",
+        headers: {
+            "Content-Type": "application/json"
+        },
+    }).then(res => {
+        let code = res.status;
+        if (code > 199 && code < 400) {
+            return res.json();
+        } else {
+            let myString = JSON.stringify(data);
+            textbox.innerHTML = myString
+        }
+    }).then(data => {
+        let textbox = document.getElementById("textbox");
+        if (data.invalid) {
+            alert("Failure");
+        } else {
+            let myString = JSON.stringify(data);
+            textbox.innerHTML = myString
+        }
+    }).catch(e => console.log(e));
+}
+
+function getOwnerById() {
+    let id = document.getElementById("getownerid").value.trim();
+
+    fetch(`https://petsapi4537.herokuapp.com/api/v1/owners/ownerid?id=${id}`)
+        .then(res => {
+            let code = res.status;
+            if (code > 199 && code < 400) {
+                return res.json();
+            } else {
+                return res.json();
+            }
+        }).then(data => {
+            let textbox = document.getElementById("textbox");
+            if (data.invalid) {
+                textbox.innerHTML = "Error";
+            } else {
+                let myString = JSON.stringify(data);
+                textbox.innerHTML = myString
+            }
+        });
+}
+
+function updateOwner() {
+    let id = document.getElementById("oidupdate").value.trim();
+    let name = document.getElementById("onameupdate").value.trim();
+    let age = document.getElementById("oageupdate").value.trim();
+    let petid = document.getElementById("opetidupdate").value.trim();
+
+    fetch(`https://petsapi4537.herokuapp.com/api/v1/owners/update`, {
+        method: "PUT",
+        mode: "cors",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        redirect: "follow",
+        body: JSON.stringify({ "id": id, "name": name,  "age": age, "petid": petid })
+    }).then(res => {
+        console.log(res.status)
+        let code = res.status;
+        if (code > 199 && code < 400) {
+            return res.json();
+        } else {
+            return res.json();
+        }
+    }).then(data => {
+        let textbox = document.getElementById("textbox");
+        if (data.invalid) {
+            textbox.innerHTML = "Error";
+        } else {
+            let myString = JSON.stringify(data);
+            textbox.innerHTML = myString
+        }
+    }).catch(e => console.log(e));
+}
+
+function deleteOwnerById() {
+    let id = document.getElementById("oiddelete").value.trim();
+
+    fetch(`https://petsapi4537.herokuapp.com/api/v1/owners/delete?ownerid=${id}`, { method: 'DELETE', })
         .then(res => {
             let code = res.status;
             if (code > 199 && code < 400) {

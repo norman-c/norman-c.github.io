@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Api Client</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/index.js"></script>
+</head>
+
+<body>
+    <textarea class="form-control" id="textbox" name="textbox" placeholder="API response here" readonly="readonly"></textarea><br>
+
+    <button onclick="getAllPets()">Get all Pets</button><br>
+    
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" class="form-control"><br>
+        <label for="type">Type</label>
+        <input type="text" id="type" name="type" placeholder="dog/cat etc" class="form-control"><br>
+        <label for="breed">Breed</label>
+        <input type="text" id="breed" name="breed" class="form-control"><br>
+        <label for="age">Age</label>
+        <input type="text" id="age" name="age" class="form-control"><br>
+        <button onclick="createPet()">Create pet</button><br>
+    </div>
+    <br><br>
+    <div class="form-group">
+        <label for="petid">Pet Id</label>
+        <input type="text" id="petid" name="petid" class="form-control"><br>
+        <label for="pnameupdate">Name</label>
+        <input type="text" id="pnameupdate" name="pnameupdate" class="form-control"><br>
+        <label for="ptypeupdate">Type</label>
+        <input type="text" id="ptypeupdate" name="ptypeupdate" placeholder="dog/cat etc" class="form-control"><br>
+        <label for="pbreedupdate">Breed</label>
+        <input type="text" id="pbreedupdate" name="pbreedupdate" class="form-control"><br>
+        <label for="pageupdate">Age</label>
+        <input type="text" id="pageupdate" name="pageupdate" class="form-control"><br>
+        <button onclick="updatePet()">Update pet</button><br>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="id">Owner Id</label>
+        <input type="text" id="id" name="id" class="form-control"><br>
+        <button onclick="getPetById()">Get pet by id</button><br>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="type">Type</label>
+        <input type="text" id="type" name="type" class="form-control"><br>
+        <button onclick="getPetByType()">Get pet by Type</button><br>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="iddelete">Owner Id</label>
+        <input type="text" id="iddelete" name="iddelete" class="form-control"><br>
+        <button onclick="deletePetById()">Delete pet by id</button><br>
+    </div>   
+    <br> 
+    <button onclick="getAllOwners()">Get all Owners</button><br>
+    <br>
+    <div class="form-group">
+        <label for="owner_name">Name</label>
+        <input type="text" id="owner_name" name="owner_name" class="form-control"><br>
+        <label for="type">Age</label>
+        <input type="text" id="owner_age" name="owner_age" class="form-control"><br>
+        <button onclick="createOwner()">Create Owner</button><br>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="owner_id">Owner Id</label>
+        <input type="text" id="getownerid" name="id" class="form-control"><br>
+        <button onclick="getOwnerById()">Get owner by id</button><br>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="owneridupdate">Owner Id</label>
+        <input type="text" id="oidupdate" name="oidupdate" class="form-control"><br>
+        <label for="onameupdate">Name</label>
+        <input type="text" id="onameupdate" name="onameupdate" class="form-control"><br>
+        <label for="oageupdate">Age</label>
+        <input type="text" id="oageupdate" name="oageupdate" class="form-control"><br>
+        <label for="opetidupdate">Pet Id</label>
+        <input type="text" id="opetidupdate" name="opetidupdate" class="form-control"><br>
+        <button onclick="updateOwner()">Update owner</button><br>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="iddelete">Owner Id</label>
+        <input type="text" id="oiddelete" name="oiddelete" class="form-control"><br>
+        <button onclick="deleteOwnerById()">Delete owner by id</button><br>
+    </div>
+    <br> 
+</body>
+</html>
